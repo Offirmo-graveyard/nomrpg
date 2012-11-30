@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+	
+	<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="AppTemplates_fr.xml.begin">ok</message>
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="AppTemplates_fr.xml.end">ok</message>
+
+</messages>

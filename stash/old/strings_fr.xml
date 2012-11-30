@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+
+<message id="">
+	
+</message>
+
+
+<!-- xxxxxxxxx  App basics  xxxxxxxxxxxxxxxx -->
+	<message id="App."></message>
+	<message id="App.title">Stargate Adventures - RPG Stargate</message>
+	<message id="App.Landing.new_game">Jouer</message>
+	<message id="App.Landing.Title1">STaRGATE</message>
+	<message id="App.Landing.Title2">aDVENTURES</message>
+	<message id="App.Landing.Subtitle">Un RPG Stargate gratuit créé par des fans</message>
+	<message id="App.Landing.NewPlayerSection.Title">Nouveau joueur ?</message>
+	<message id="App.Landing.NewPlayerSection.Incite">Pas besoin de créer un compte.</message>
+
+<!-- xxxxxxxxx  Auth  xxxxxxxxxxxxxxxx -->
+
+<!-- formulaire de login : juste ce que l'on redéfinit par rapport au défaut -->
+<message id="Wt.Auth.login-form-title">De retour ?</message>
+<message id="Wt.Auth.remember-me">Rester connecté</message>
+<message id="Wt.Auth.login">Se reconnecter</message>
+<message id="Wt.Auth.lost-password">Mot de passe oublié ?</message>
+<!--<message id="Wt.Auth.email-info">...</message>
+<message id="Wt.Auth.password-info">...</message>-->
+
+<!--
+<message id="Wt.Auth.Valid">Wt.Auth.Valid</message>
+<message id="Wt.Auth.registration">Wt.Auth.registration</message>
+<message id="Wt.Auth.lostpassword">Wt.Auth.lostpassword</message>
+<message id="Wt.Auth.updatepassword">Wt.Auth.updatepassword</message>
+<message id="Wt.Auth.error">Wt.Auth.error</message>
+<message id="Wt.Auth.notice">Wt.Auth.notice</message>
+<message id="Wt.Auth.register">Wt.Auth.register</message>
+<message id="Wt.Auth.logout">Wt.Auth.logout</message>
+<message id="Wt.Auth.error-invalid-token">Wt.Auth.error-invalid-token</message>
+<message id="Wt.Auth.error-token-expired">Wt.Auth.error-token-expired</message>
+<message id="Wt.Auth.info-email-confirmed">Wt.Auth.info-email-confirmed</message>
+-->
+
+<!-- Emails -->
+<message id="Wt.Auth.confirmmail.subject">Confirmation d'inscription à Stargate Adventures</message>
+<message id="Wt.Auth.confirmmail.body">
+Bonjour {1},
+
+Merci d'avoir rejoint Stargate Adventures !
+
+Cliquez sur le lien ci-dessous pour terminer la création de votre compte,
+ou copiez le lien ci-dessous dans votre navigateur (en entier, avec tous les morceaux s'il s'affiche sur pusieurs lignes)
+
+{3}
+
+Bon jeu !
+
+L'équipe Stargate Adventures.
+</message>
+
+<message id="Wt.Auth.confirmmail.htmlbody">
+<h3>Hello {1},</h3>
+
+<p>Thank you for joining the Wt hangman example!</p>
+
+<p>Please <a href="{3}">click here to confirm</a> your
+registration or copy and paste the following URL into your
+browser: <i>(Note: be sure to copy the entire URL, including any
+part of it which goes onto a second line.)</i></p>
+
+<b>{3}</b>
+
+<p>Good luck in the game!</p>
+
+<p>The Wt team.</p>
+</message>
+
+<message id="Wt.Auth.lostpasswordmail.subject">Lost password instructions</message>
+<message id="Wt.Auth.lostpasswordmail.body">
+Hello {1},
+
+This mail has been sent to you, because someone (presumably you?)
+indicated that he wishes to choose a new password, because the current
+password escapes his mind.
+
+If you requested this, then choose a new password by clicking on the
+following link or copying the URL into your browser. If you didn't
+request this, you can safely ignore and discard this email.
+
+Please copy and paste the following URL into your browser: (Note: be
+sure to copy the entire URL, including any part of it which goes onto
+a second line.)
+
+{3} 
+
+Your truly,
+
+The Wt team.
+</message>
+
+<message id="Wt.Auth.lostpasswordmail.htmlbody">
+<h3>Hello {1},</h3>
+
+<p>This mail has been sent to you, because someone (presumably
+you?) indicated that he wishes to choose a new password, because
+the current password escapes his mind.</p>
+
+<p>If you requested this, then choose a new password by clicking
+on the following link or copying the URL into your browser. If you
+didn't request this, you can safely ignore and discard this
+email.</p>
+
+<p>Please <a href="{3}">click here to choose a new password</a> or
+copy and paste the following URL into your browser: <i>(Note: be
+sure to copy the entire URL, including any part of it which goes
+onto a second line.)</i></p>
+
+<b>{3}</b>
+
+<p>Yours truly,</p>
+
+<p>The Wt team.</p>
+</message>
+
+</messages>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+	
+		<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="TBRPGTemplates.xml.begin">ok</message>
+
+	<message id="TBRPG.default.play_area">
+		<section OWAtemplate="TBRPG.play_area@TBRPG_templates.xml">
+			<div class="TBRPG_play_area panel resizable draggable" style="height:180px;width:614px;position: relative;top:30%;margin-left: auto;margin-right: auto;">
+				<div class="panel_helper_1">
+				
+					<article class="TBRPG_main_area">
+						<div class="TBRPG_click_message" style="text-align: center;"><b>${result-txt}</b></div>
+						<div class="TBRPG_button_area" style="text-align: center;">
+							<p>${countdown-wgt}</p>
+							<p>${play-btn}</p>
+						</div>
+					</article>
+					
+					<aside class="TBRPG_stats_area">
+						<dl>
+							<dt>${number-of-clicks-caption-txt}</dt><dd>${number-of-clicks-value-txt}</dd>
+							<!-- more to come -->
+						</dl>
+					</aside>
+				</div>
+			</div>
+		</section>
+	</message>
+	
+	<message id="TBRPG.default.countdown">
+		<span id="countdown">${countdown-instructions}</span>
+		<!--${countdown-progress-indicator}-->
+	</message>
+
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="TBRPGTemplates.xml.end">ok</message>
+
+</messages>

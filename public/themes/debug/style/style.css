@@ -1,0 +1,73 @@
+/******* DIV *******/
+div.Wt-domRoot:before
+{
+	content: "[root]";
+	display: block;
+	background: red;
+	color: white;
+}
+div.Wt-domRoot
+{	border: 1px dotted red; }
+
+div.owa-main-stack:before
+{
+	content: "[OWA]";
+	display: block;
+	background: orange;
+	color: white;
+}
+div.owa-main-stack
+{	border: 1px dotted orange;
+	margin: 1px;
+}
+
+div {	border: 1px dotted gray;}
+
+/******* NAV *******/
+nav:before
+{
+	content: "[nav." attr(class) "#" attr(id) "/" attr(OWAtemplate) "]";
+	color: purple;
+}
+nav {	border: 1px dotted purple; }
+
+/******* HEADER *******/
+header:before
+{
+	content: "[header." attr(class) "#" attr(id) "/" attr(OWAtemplate) "]";
+	color: blue;
+}
+header {	border: 1px dotted blue; }
+
+/******* FOOTER *******/
+footer:before
+{
+	content: "[footer." attr(class) "#" attr(id) "/" attr(OWAtemplate) "]";
+	color: green;
+}
+footer {	border: 1px dotted green; }
+
+/******* SECTION *******/
+section:before
+{
+	content: "[section." attr(class) "#" attr(id) "/" attr(OWAtemplate) "]";
+	color: GoldenRod;
+}
+section { border: 1px dotted GoldenRod;
+	margin: 1px; }
+
+/******* article *******/
+article:before
+{
+	content: "[article." attr(class) "#" attr(id) "/" attr(OWAtemplate) "]";
+	color: GreenYellow;
+}
+article { border: 1px dotted GreenYellow; }
+
+/******* aside *******/
+aside:before
+{
+	content: "[aside." attr(class) "#" attr(id) "/" attr(OWAtemplate) "]";
+	color: DimGray;
+}
+aside { border: 1px dotted DimGray; }

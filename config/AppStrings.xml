@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages nplurals="2" plural="n==1 ? 0 : 1">
+
+	<message id="App."></message>
+	
+	<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="AppStrings.xml.begin">ok</message>
+	
+	<!-- to check current translation -->
+	<message id="App.lang">en</message>
+	
+	<message id="App.title">NOMRPG - Navigator Online Multiplayer RPG</message>
+	<message id="App.Landing.new_game">Play</message>
+	<message id="App.Landing.Title1">STaRGATE</message>
+	<message id="App.Landing.Title2">aDVENTURES</message>
+	<message id="App.Landing.Subtitle">A free RPG created by fans</message>
+	<message id="App.Landing.NewPlayerSection.Title">Newcomer ?</message>
+	<message id="App.Landing.NewPlayerSection.Incite">No need to create an account.</message>
+
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="AppStrings.xml.end">ok</message>
+
+</messages>

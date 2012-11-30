@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+	
+	<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="AppTemplates.xml.begin">ok</message>
+
+	<message id="App.landing_page">
+<section id="landing" OWAtemplate="App.landing_page@app_templates.xml">
+	<header>
+		<hgroup>
+			<h1 class="title1">${tr:App.Landing.Title1}</h1>
+			<h2 class="title2">${tr:App.Landing.Title2}</h2>
+			<h3 class="subtitle">${tr:App.Landing.Subtitle}</h3>
+		</hgroup>
+	</header>
+	<section class="futuristic">
+		<section class="futuristic2">
+			<section class="new_game">
+			<!--	<header>
+					<h2>${tr:App.Landing.NewPlayerSection.Title}</h2>
+				</header>
+				<p>${new-game-btn}${tr:App.Landing.NewPlayerSection.Incite}</p>-->
+			</section>
+			<section class="back_to_game">
+				${auth-wgt}
+			</section>
+		</section>
+	</section>
+</section>
+<footer>
+	<nav>
+		<ul>
+			<li>${contact-lnk}</li>
+			<li>${about-lnk}</li>
+			<li>${credits-lnk}</li>
+			<li>${sources-lnk}</li>
+			<li>${terms-lnk}</li>
+		</ul>
+	</nav>
+</footer>
+	</message>
+	
+		<message id="App.lang_selector">
+<!--<aside OWAtemplate="App.lang_selector@app_templates.xml">
+	<p>${tr:App.lang}</p>
+</aside>-->
+	</message>
+	
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="AppTemplates.xml.end">ok</message>
+
+</messages>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+	<message id="Wt.Auth.template.logged-in">
+		<div class="Wt-auth-logged-in">
+			<span style="font-family: 'StargateRegular';">${tr:App.Landing.Title1} ${tr:App.Landing.Title2}</span> - Vous êtes <b>${user-name}</b> - ${logout}
+		</div>
+	</message>
+  
+	<!-- We redefine this template to integrate it better in our landing page
+	     cf. original in auth.xml -->
+	<message id="Wt.Auth.template.login">
+		<div class="Wt-form Wt-auth-login">
+			<h2>${tr:Wt.Auth.login-form-title}</h2>
+			<!-- <p>${tr:Wt.Auth.login-form-info}</p> -->
+			<div class="Wt-fields">
+				${<if:passwords>}
+					<p>
+						<label for="${id:user-name}">${user-name-label}</label>
+						${user-name}
+						${user-name-info class="Wt-info"}
+					</p>
+					<p>
+						<label for="${id:password}">${tr:Wt.Auth.password}</label>
+						${password}
+						${password-info class="Wt-info"}
+					</p>
+					${<if:remember-me>}
+						<p>
+							<label id="stay-connect" for="${id:remember-me}">${tr:Wt.Auth.remember-me}</label>
+							${remember-me}
+						</p>
+					${</if:remember-me>}
+				${</if:passwords>}
+			</div>
+
+			${<if:oauth>}
+				<div class="Wt-col-right">
+				<h3>Or use:</h3>
+				${icons}
+				</div>
+			${</if:oauth>}
+
+			<div class="Wt-buttons">
+				${login}
+			</div>
+
+			<div class="Wt-buttons">
+				${lost-password} ${sep} ${register}
+			</div>
+		</div>
+	</message>
+	
+	<message id="TBRPG.play_area">
+		<div class="resizable draggable panel TBRPG_play_area" style="height:300px;width:614px;position: relative;top:30%;margin-left: auto;margin-right: auto;">
+			<div class="panel_helper_1">
+				<p>${result-txt}</p>
+				<p>${directions-txt}</p>
+				<p>${play-btn}</p>
+			</div>
+		</div>
+	</message>
+	
+</messages>

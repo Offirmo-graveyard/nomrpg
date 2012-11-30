@@ -1,0 +1,376 @@
+
+/*
+ * Stargate font 
+ */
+@font-face {
+    font-family: 'StargateRegular';
+    src: url('../fonts/StargateRegular/stargate-webfont.eot');
+    src: url('../fonts/StargateRegular/stargate-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/StargateRegular/stargate-webfont.woff') format('woff'),
+         url('../fonts/StargateRegular/stargate-webfont.ttf') format('truetype'),
+         url('../fonts/StargateRegular/stargate-webfont.svg#StargateRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+ * special connexion panel
+ */
+.futuristic:before, .futuristic:after, .futuristic2:before, .futuristic2:after {
+	content: " ";
+	position: absolute;
+	height: 55%;
+	width: 55%;
+	border: 4px solid;  
+	display: block;
+	z-index:-1;
+}
+
+.futuristic2:before  
+{
+	right: -5px;
+	top: -5px;
+	border-color: #A1D3EE #A1D3EE transparent transparent;
+}
+.futuristic:before  
+{
+	height: 40%;
+	width: 0%;
+	right: -15px;
+	top: 25%;
+	border: 7px solid;  
+	border-color: transparent transparent transparent #A1D3EE;
+}
+
+.futuristic2:after
+{
+	left: -5px;
+	bottom: -5px;
+	border-color: transparent transparent #FC8227 #FC8227;
+}
+.futuristic:after
+{
+	height: 25%;
+	width: 25%;
+	left: -7px;
+	bottom: -7px;
+	border: 7px solid;  
+	border-color: transparent transparent #FC8227 #FC8227;
+}
+
+
+
+body
+{
+	/*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; /* thank you http://www.w3schools.com/css/css_websafe_fonts.asp */
+	/*font-family: "Georgia", serif; /* thank you http://www.w3schools.com/css/css_websafe_fonts.asp */
+	/*font-family: 'Trebuchet MS', Helvetica, sans-serif;*/
+	
+	/* make the font slightly bigger */
+	font-size: 90%;
+	
+	/* needed for correct positionning */
+	position:absolute;
+	height:100%; /* needed for container min-height */
+	width:100%;
+	
+	/* just in case */
+	margin: 0px; 
+	padding: 0px;
+	background-color:black;
+	color:white;
+	
+	background:url(../pics/background_promet_facing_hive.jpg) no-repeat bottom center fixed;
+	/* thank you http://css-tricks.com/perfect-full-page-background-image/ */
+	-webkit-background-size: cover, auto;
+	-moz-background-size: cover, auto;
+	-o-background-size: cover, auto;
+	-khtml-background-size: cover, auto;
+	background-size: cover, auto;
+}
+
+/* override of default wt */
+.Wt-form {
+    width: 30em;
+}
+
+
+/* a li belonging to a nav group is usually displayed inline */
+nav li
+{
+	display: inline;
+	margin: 0px 3px 0px 3px;
+	
+	/* make the font slightly bigger */
+	font-size: 120%;
+}
+
+header, hgroup, h1, h2
+{
+	text-decoration: none;
+}
+
+.owa-main-stack
+{
+	/*position: relative;/**/
+	margin:0 auto; /* center, not in IE5 */
+	
+	/*height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+
+	min-height:100%; /* real browsers */
+}
+
+section#landing
+{
+	width: 500px;
+	padding: 0px; /* no right padding due to collision with letter-spacing of header. */
+	background: rgba(14, 24, 40, 0.5);
+	background: rgba(0, 0, 0, 0.9);
+	
+	position: absolute;
+	top: 10%;
+	right: 10%;
+	/*border: 1px solid;
+	border-color: #A1D3EE #A1D3EE #FC8227 #FC8227;*/
+}
+
+section#landing > header
+{
+	color: rgb(182, 209, 230);
+	width: 500px;
+	padding: 20px 0px 12px 0px; /* no right padding due to collision with letter-spacing of header. */
+	text-align:center;
+	/*-moz-box-shadow: 0 0 20px black;
+	-webkit-box-shadow: 0 0 20px black;
+	box-shadow: 0 0 20px black;*/
+}
+
+section#landing header h1
+{
+	font-family: 'StargateRegular';
+	font-size: 2.0em;
+	letter-spacing: 0.08em;
+	margin: 2px 0px 0px 0px; 
+	text-shadow: 2px;
+	/*padding: 7px 0px 0px 12px;*/
+}
+section#landing header h2
+{
+	font-family: 'StargateRegular';
+	font-size: 1.8em;
+	border: 1px solid;
+	border-color: #A1D3EE transparent transparent transparent;
+	width: 244px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
+section#landing header h3
+{
+	letter-spacing: 0.18em;
+	font-weight: normal;
+	font-size: 0.7em;
+	margin: 0px; 
+}
+
+section.new_game
+{
+	/*border: 1px solid #00FF00;*/
+	padding: 10px;
+	text-align:center;
+}
+
+section.new_game h2 {
+	text-align:center;
+}
+section.new_game p *
+{
+	text-align:center;
+	display: block;
+	font-size: 90%;
+}
+section.new_game button
+{
+	font-size: 100%;
+	width: 70px;
+	margin: 5px auto 5px auto;
+}
+
+
+footer
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; /* thank you http://www.w3schools.com/css/css_websafe_fonts.asp */
+	font-size: 0.7em;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	display: inline;
+	position: absolute;
+	bottom:20px;
+	left:30px;
+}
+footer a
+{
+	/*color: rgb(85, 26, 139);*/
+	color: Thistle;
+	text-decoration: none;
+}
+footer p
+{
+	/*color: rgb(85, 26, 139);*/
+	padding: 0px 0px 0px 27px;
+	display: inline;
+}
+
+
+
+div#app-page
+{
+	/* needed for correct positionning */
+	position:absolute;
+	height:100%; /* needed for container min-height */
+	width:100%;
+}
+
+div.panel
+{
+	padding: 3px 7px 3px 7px;
+	
+	/*background: rgba(0, 0, 0, 0.5);*/
+}
+
+div.panel:after
+{
+	content: " ";
+	display: block;
+	z-index: -2;
+	
+	height: 100%;
+	width: 100%;
+	
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	background: rgba(0, 0, 0, 0.5);
+	
+	box-shadow:
+		/* common */
+		       1px   1px  5px 0px #000,
+		       0px   0px  0px 1px #7BC8FB,
+		       0px   0px  1px 0px #7BC8FB,
+		inset  0px   0px  0px 1px #7BC8FB,
+		inset  0px   0px  1px 0px #7BC8FB,
+		inset  0px   0px  3px 0px #FFFFFF,
+		inset  0px   0px 12px 0px #000;
+		
+	border: solid 1px #5189C2;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+}
+
+
+/* bottom right helper panel */
+div.panel_helper_1:before
+{
+	content: " ";
+	display: block;
+	z-index: -1;
+	
+	height: 30%;
+	width: 30%;
+	
+	position: absolute;
+	right: 0%;
+	bottom: 0%;
+	
+	/*background: -moz-radial-gradient(center center, rgba(0, 255, 0, 0.5) 0%, rgba(0, 255, 0, 0.6) 70%, rgba(0, 255, 0, 0.8) 100%);*/
+	background: transparent;
+	
+	box-shadow:
+		/* right */
+		       3px   3px  1px 0px #5189C2,
+		       4px   4px  1px 0px #7BC8FB,
+		       4px   4px  1px 0px #7BC8FB,
+		       5px   5px  4px 0px #303030;
+}
+
+/* Top left helper panel */
+div.panel_helper_1:after
+{
+	content: " ";
+	display: block;
+	z-index: -1;
+	
+	height: 30%;
+	width: 30%;
+	
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	
+	/*background: -moz-radial-gradient(center center, rgba(0, 255, 0, 0.5) 0%, rgba(0, 255, 0, 0.6) 70%, rgba(0, 255, 0, 0.8) 100%);*/
+	background: transparent;
+	
+	box-shadow:
+		/* right */
+		       -3px   -3px  1px 0px #5189C2,
+		       -4px   -4px  1px 0px #7BC8FB,
+		       -4px   -4px  1px 0px #7BC8FB,
+		       -5px   -5px  4px 0px #202020;
+}
+
+div.panelold
+{
+	padding: 5px;
+	
+	background: rgba(0, 0, 0, 0.5);
+	
+	box-shadow:
+		/* common */
+		inset  0px   0px 12px 0px #000,
+		/* right */
+		       1px   0px  1px 0px #4B99CD,
+		       2px   0px  1px 1px #213F66, /*203B5F,*/
+		       4px   0px  1px 0px #7BC8FB,
+		/* left */
+		      -1px   0px  1px 0px #4B99CD,
+		      -2px   0px  1px 1px #213F66, /*203B5F,*/
+		      -4px   0px  1px 0px #7BC8FB,
+		/* top */
+		       0px   1px  1px 0px #4B99CD,
+		       0px   2px  1px 1px #213F66, /*203B5F,*/
+		       0px   4px  1px 0px #7BC8FB,
+		/* bottom */
+		       0px  -1px  1px 0px #4B99CD,
+		       0px  -2px  1px 1px #213F66, /*203B5F,*/
+		       0px  -4px  1px 0px #7BC8FB,
+		/* common */
+		inset  0px   0px  3px 0px #FFFFFF;
+}
+
+
+div.panelold
+{
+	/*background: -moz-radial-gradient(center center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0, 0, 0, 0.8) 100%);*/
+	background: -moz-radial-gradient(center center, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.6) 70%, rgba(255, 0, 0, 0.8) 100%);
+	resize: both;
+	padding: 5px;
+}
+
+div.helpold1:before
+{
+	content: " ";
+	position: absolute;
+	display: block;
+	z-index:-1;
+
+	height: 120%;
+	width: 120%;
+	
+	left: -10%;
+	top: -10%;
+	
+	background: -moz-radial-gradient(center center, rgba(0, 255, 0, 0.5) 0%, rgba(0, 255, 0, 0.6) 70%, rgba(0, 255, 0, 0.8) 100%);
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+	
+	<message id="App."></message>
+	
+	<message id="App.title">Stargate Adventures - RPG Stargate</message>
+	<message id="App.Landing.new_game">Jouer</message>
+	<message id="App.Landing.Title1">STaRGATE</message>
+	<message id="App.Landing.Title2">aDVENTURES</message>
+	<message id="App.Landing.Subtitle">Un RPG Stargate gratuit créé par des fans</message>
+	<message id="App.Landing.NewPlayerSection.Title">Nouveau joueur ?</message>
+	<message id="App.Landing.NewPlayerSection.Incite">Pas besoin de créer un compte.</message>
+	
+</messages>

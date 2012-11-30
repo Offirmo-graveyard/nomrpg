@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+
+	<message id="TBRPG.play_area">
+		<div class="resizable draggable panel TBRPG_play_area" style="height:300px;width:614px;position: relative;top:30%;margin-left: auto;margin-right: auto;">
+			<div class="panel_helper_1">
+				<p>${result-txt}</p>
+				<p>${directions-txt}</p>
+				<p>${play-btn}</p>
+			</div>
+		</div>
+	</message>
+	
+</messages>

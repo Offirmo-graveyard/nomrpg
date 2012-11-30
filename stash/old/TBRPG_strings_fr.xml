@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+
+<message id="">
+	
+</message>
+	<message id="App."></message>
+	
+	<!-- The main button text -->
+	<message id="TBRPG.default.click_btn_txt">Jouer !</message>
+	
+	<!-- Directions for the game -->
+	<message id="TBRPG.default.directions.can_play">Vous pouvez jouer immédiatement.</message>
+	<message id="TBRPG.default.directions.not_yet.before_time">Encore </message>
+	<message id="TBRPG.default.directions.not_yet.time_format">xxx</message>
+	<message id="TBRPG.default.directions.not_yet.after_time">.</message>
+	
+	<!-- Play messages -->
+	
+	<!-- Special messages -->
+	<message id="TBRPG.default.results.error">Erreur interne !!!</message>
+	<message id="TBRPG.default.results.first">Vous venez d'entrer dans le jeu. Félicitations !</message>
+	<message id="TBRPG.default.results.bad_click">Vous avez cliqué trop tôt ! Pénalité !</message>
+	<message id="TBRPG.default.results.default">Il ne s'est rien passé.</message>
+	
+	<!-- good messages -->
+	<message id="TBRPG.default.results.list">meteorite1,meteorite2</message>
+	<message id="TBRPG.default.results.meteorite1">Une météorite vous tombe dessus. Aïe !</message>
+	<message id="TBRPG.default.results.meteorite2">Une météorite vous tombe dessus. Vous gagnez un super-pouvoir !</message>
+
+</messages>

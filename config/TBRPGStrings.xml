@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages nplurals="2" plural="n==1 ? 0 : 1">
+	
+	<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="TBRPGStrings.xml.begin">ok</message>
+
+	<message id="TBRPG."></message>
+	
+	<!-- The main button text -->
+	<message id="TBRPG.default.click_btn_txt">Jouer !</message>
+	
+	<!-- Play messages -->
+	<message id="TBRPG.default.countdown.separator">et</message>
+	<message id="TBRPG.default.countdown.days">
+		<plural case="0">{1} jour</plural>
+		<plural case="1">{1} jours</plural>
+	</message>
+	<message id="TBRPG.default.countdown.hours">
+		<plural case="0">{1} heure</plural>
+		<plural case="1">{1} heures</plural>
+	</message>
+	<message id="TBRPG.default.countdown.minutes">
+		<plural case="0">{1} minute</plural>
+		<plural case="1">{1} minutes</plural>
+	</message>
+	<message id="TBRPG.default.countdown.seconds">
+		<plural case="0">{1} seconde</plural>
+		<plural case="1">{1} secondes</plural>
+	</message>
+	<message id="TBRPG.default.instructions.wait">Encore {1} avant de pouvoir cliquer...</message>
+	<message id="TBRPG.default.instructions.ready">Vous pouvez cliquer !</message>
+	
+	<!-- UI messages -->
+	<message id="TBRPG.default.number_of_good_clicks_caption">Nombre de clics</message>
+
+	<!-- Special messages -->
+	<message id="TBRPG.default.results.error">Erreur interne !!!</message>
+	<message id="TBRPG.default.results.first">Vous venez d'entrer dans le jeu. Félicitations !</message>
+	<message id="TBRPG.default.results.bad_click">Vous avez cliqué trop tôt ! Remise à zéro + pénalité de {1} secondes.</message>
+	<message id="TBRPG.default.results.default">Il ne s'est rien passé.</message>
+	
+	<!-- good messages -->
+	<message id="TBRPG.default.events.first_event">Bienvenue dans Stargate Adventures ! Vous partez à bord de votre vaisseau explorer la galaxie...</message>	
+	<message id="TBRPG.default.events.list">meteor1,meteor2,meteor3,meteor4,meteor5</message>
+	<message id="TBRPG.default.events.meteor1">Une météorite vous tombe dessus. Aïe !</message>
+	<message id="TBRPG.default.events.meteor2">Une météorite vous tombe dessus. Vous gagnez un super-pouvoir !</message>
+	<message id="TBRPG.default.events.meteor3">Une météorite vous tombe dessus. Elle est en or !</message>
+	<message id="TBRPG.default.events.meteor4">Une météorite vous manque de peu. Ouf !</message>
+	<message id="TBRPG.default.events.meteor5">Une météorite tombe sur votre belle-mère. Oups ;-)</message>
+
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="TBRPGStrings.xml.end">ok</message>
+
+</messages>

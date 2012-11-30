@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- We redefine some templates to integrate better in our app.
+     cf. original in auth_original.xml -->
+<messages>
+
+	<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="AuthOverride.xml.begin">ok</message>
+
+	<message id="Wt.Auth.template.logged-in">
+		<section class="Wt-auth-logged-in" OWAtemplate="Wt.Auth.template.logged-in@auth_override.xml">
+			<span style="font-family: 'StargateRegular';">${tr:App.Landing.Title1} ${tr:App.Landing.Title2}</span> - You are <b>${user-name}</b> - ${logout}
+		</section>
+	</message>
+  
+	
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="AuthOverride.xml.end">ok</message>
+
+</messages>

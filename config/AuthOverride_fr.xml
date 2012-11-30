@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- We redefine some templates to integrate better in our app.
+     cf. original in auth_original.xml -->
+<messages>
+	
+	<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="AuthOverride_fr.xml.begin">ok</message>
+	
+	<message id="Wt.Auth.template.logged-in">
+		<section class="Wt-auth-logged-in" OWAtemplate="Wt.Auth.template.logged-in@auth_override_fr.xml">
+			<span style="font-family: 'StargateRegular';">${tr:App.Landing.Title1} ${tr:App.Landing.Title2}</span> - Vous êtes <b>${user-name}</b> - ${logout}
+		</section>
+	</message>
+
+	<message id="Wt.Auth.confirmmail.subject">Confirmation d'inscription à Stargate Adventures</message>
+	<message id="Wt.Auth.confirmmail.body">
+Bonjour {1},
+
+Merci d'avoir rejoint Stargate Adventures !
+
+Cliquez sur le lien ci-dessous pour terminer la création de votre compte,
+ou copiez le lien ci-dessous dans votre navigateur (en entier, avec tous les morceaux s'il s'affiche sur pusieurs lignes)
+
+{3}
+
+Bon jeu !
+
+L'équipe Stargate Adventures.
+	</message>
+
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="AuthOverride_fr.xml.end">ok</message>
+
+</messages>

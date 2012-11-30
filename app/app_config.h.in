@@ -1,0 +1,17 @@
+/*
+ * XXXXXXX
+ * This header file is automatically generated !
+ * Do not edit it directly !
+ * XXXXXXX
+ */
+
+#ifndef APP_CONFIG_H_INCLUDED__
+#define APP_CONFIG_H_INCLUDED__
+
+
+// the configured options and settings for @PROJECT_NAME@
+#define APP_VERSION_MAJOR @VERSION_MAJOR@
+#define APP_VERSION_MINOR @VERSION_MINOR@
+
+
+#endif // APP_CONFIG_H_INCLUDED__

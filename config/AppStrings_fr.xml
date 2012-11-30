@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<messages>
+	
+	<!-- to check if this rsrc file was correctly loaded (1/2) -->
+	<message id="AppStrings_fr.xml.begin">ok</message>
+
+	<message id="App."></message>
+	
+	<!-- to recognize current translation -->
+	<message id="App.lang">fr</message>
+	
+	<message id="App.title">Monde virtuel en ligne multi-utilisateurs par navigateur</message>
+	<message id="App.Landing.new_game">Entrer</message>
+	<message id="App.Landing.Title1">STaRGATE</message>
+	<message id="App.Landing.Title2">aDVENTURES</message>
+	<message id="App.Landing.Subtitle">Un RPG Stargate gratuit créé par des fans</message>
+	<message id="App.Landing.NewPlayerSection.Title">Nouveau joueur ?</message>
+	<message id="App.Landing.NewPlayerSection.Incite">Pas besoin de créer un compte.</message>
+
+	<!-- to check if this rsrc file was correctly loaded (2/2) -->
+	<message id="AppStrings_fr.xml.end">ok</message>
+	
+</messages>
