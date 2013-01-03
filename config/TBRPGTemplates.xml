@@ -5,19 +5,34 @@
 	<message id="TBRPGTemplates.xml.begin">ok</message>
 
 	<message id="TBRPG.default.play_area">
-		<section OWAtemplate="TBRPG.play_area@TBRPG_templates.xml">
-			<div class="TBRPG_play_area panel resizable draggable" style="height:180px;width:614px;position: relative;top:30%;margin-left: auto;margin-right: auto;">
+		<section OWAtemplate="TBRPG.default.play_area@TBRPGTemplates.xml">
+			<div class="TBRPG_play_area panel resizable draggable">
 				<div class="panel_helper_1">
-				
 					<article class="TBRPG_main_area">
 						<div class="TBRPG_click_message" style="text-align: center;"><b>${result-txt}</b></div>
 						<div class="TBRPG_button_area" style="text-align: center;">
-							<p>${countdown-wgt}</p>
-							<p>${play-btn}</p>
+							${countdown-wgt}
+							${play-btn}
 						</div>
 					</article>
-					
+				</div>
+			</div>
+		</section>
+	</message>
+	
+
+	<message id="TBRPG.default.countdown">
+		<span OWAtemplate="TBRPG.stats_area@TBRPGTemplates.xml" id="countdown">${countdown-instructions}</span>
+		<!--${countdown-progress-indicator}-->
+	</message>
+
+
+	<message id="TBRPG.default.stats_area">
+		<section OWAtemplate="TBRPG.default.stats_area@TBRPGTemplates.xml">
+			<div class="TBRPG_stats_area panel resizable draggable">
+				<div class="panel_helper_1">
 					<aside class="TBRPG_stats_area">
+						<h3>${player-name-txt}</h3>
 						<dl>
 							<dt>${number-of-clicks-caption-txt}</dt><dd>${number-of-clicks-value-txt}</dd>
 							<!-- more to come -->
@@ -28,10 +43,13 @@
 		</section>
 	</message>
 	
-	<message id="TBRPG.default.countdown">
-		<span id="countdown">${countdown-instructions}</span>
-		<!--${countdown-progress-indicator}-->
+
+	<message id="TBRPG.default.coming_soon">
+<div class="coming_soon" OWAtemplate="TBRPG.default.coming_soon@TBRPGtemplates.xml">
+	<p>Coming soon...</p>
+</div>
 	</message>
+
 
 	<!-- to check if this rsrc file was correctly loaded (2/2) -->
 	<message id="TBRPGTemplates.xml.end">ok</message>

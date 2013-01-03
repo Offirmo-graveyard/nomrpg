@@ -7,37 +7,37 @@
 	<message id="TBRPG."></message>
 	
 	<!-- The main button text -->
-	<message id="TBRPG.default.click_btn_txt">Jouer !</message>
+	<message id="TBRPG.default.click_btn_txt">Play !</message>
 	
 	<!-- Play messages -->
-	<message id="TBRPG.default.countdown.separator">et</message>
+	<message id="TBRPG.default.countdown.separator">and</message>
 	<message id="TBRPG.default.countdown.days">
-		<plural case="0">{1} jour</plural>
-		<plural case="1">{1} jours</plural>
+		<plural case="0">{1} day</plural>
+		<plural case="1">{1} days</plural>
 	</message>
 	<message id="TBRPG.default.countdown.hours">
-		<plural case="0">{1} heure</plural>
-		<plural case="1">{1} heures</plural>
+		<plural case="0">{1} hour</plural>
+		<plural case="1">{1} hours</plural>
 	</message>
 	<message id="TBRPG.default.countdown.minutes">
 		<plural case="0">{1} minute</plural>
 		<plural case="1">{1} minutes</plural>
 	</message>
 	<message id="TBRPG.default.countdown.seconds">
-		<plural case="0">{1} seconde</plural>
-		<plural case="1">{1} secondes</plural>
+		<plural case="0">{1} second</plural>
+		<plural case="1">{1} seconds</plural>
 	</message>
-	<message id="TBRPG.default.instructions.wait">Encore {1} avant de pouvoir cliquer...</message>
-	<message id="TBRPG.default.instructions.ready">Vous pouvez cliquer !</message>
+	<message id="TBRPG.default.instructions.wait">{1} remaining...</message>
+	<message id="TBRPG.default.instructions.ready">You can click now !</message>
 	
 	<!-- UI messages -->
-	<message id="TBRPG.default.number_of_good_clicks_caption">Nombre de clics</message>
+	<message id="TBRPG.default.number_of_good_clicks_caption">Click count</message>
 
 	<!-- Special messages -->
-	<message id="TBRPG.default.results.error">Erreur interne !!!</message>
-	<message id="TBRPG.default.results.first">Vous venez d'entrer dans le jeu. Félicitations !</message>
-	<message id="TBRPG.default.results.bad_click">Vous avez cliqué trop tôt ! Remise à zéro + pénalité de {1} secondes.</message>
-	<message id="TBRPG.default.results.default">Il ne s'est rien passé.</message>
+	<message id="TBRPG.default.results.error">Internal error !!!</message>
+	<message id="TBRPG.default.results.first">You just started the game, congratulations !</message>
+	<message id="TBRPG.default.results.bad_click">You clicked too soon ! Timer back to zero + penalty of {1} seconds.</message>
+	<message id="TBRPG.default.results.default">Nothing happened.</message>
 	
 	<!-- good messages -->
 	<message id="TBRPG.default.events.first_event">Bienvenue dans Stargate Adventures ! Vous partez à bord de votre vaisseau explorer la galaxie...</message>	

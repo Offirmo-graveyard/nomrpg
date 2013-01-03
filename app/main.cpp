@@ -76,6 +76,12 @@ int main(int argc, char *argv[])
 
 		if (server.start())
 		{
+			//std::string property_name = "application-settings.max-request-size";
+			//std::string bundle_path;
+			//Wt::WServer::instance()->readConfigurationProperty( property_name, bundle_path);
+			//std::cout << "value for \"" << property_name << "\" is : " << bundle_path << std::endl;
+			//return 1;
+
 			Wt::WServer::waitForShutdown();
 			server.stop();
 		}

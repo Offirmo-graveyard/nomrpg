@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5, h6, label {
     color: Tomato;
 }
 
-
 /*
  * Validators
  */
@@ -117,8 +116,8 @@ h1, h2, h3, h4, h5, h6, label {
  */
 .Wt-dialogcover {
     background: #CCCCCC;
-    background: rgb(76, 76, 76); /* For IE, ... */
-    background: rgba(76, 76, 76, 0.5);
+    background: rgb(204, 204, 204); /* For IE, ... */
+    background: rgba(204, 204, 204, 0.5);
     height: 100%; width: 100%;
     top: 0px; left: 0px;
     position: fixed;
@@ -243,18 +242,18 @@ h1, h2, h3, h4, h5, h6, label {
  * WDatePicker
  */
 .Wt-datepicker {
-    background-color: black; /* changed */
+    background-color: white;
 }
 
 /*
  * WDialog
  */
 .Wt-dialog {
-    background-color: black; /* changed */
+    background-color: white;
 }
 
 .Wt-dialog .titlebar {
-    color: black; /* changed */
+    color: #FFFFFF;
     background: #6880A0 url(title-gradient.png) repeat-x scroll 0 -20px;
     cursor: move;
     font: bold 12px Verdana;
@@ -694,8 +693,8 @@ body.Wt-rtl .Wt-tabs .citem, body.Wt-rtl .Wt-tabs .citemselected {
 }
 
 .Wt-tabs li .itemselected a, .Wt-tabs li .itemselected button {
-    background: black; /* changed */
-    color: white; /* changed */
+    background: white;
+    color: black;
 }
 
 .Wt-tabs .Wt-closeicon, .Wt-tabs span.citemselected .Wt-closeicon {
@@ -728,6 +727,7 @@ body.Wt-rtl .Wt-tabs .citem, body.Wt-rtl .Wt-tabs .citemselected {
     padding: 1px 2px;
     font-family: sans-serif;
     font-size: smaller;
+    z-index: 1000;
 }
 
 /*
@@ -815,17 +815,21 @@ body.Wt-rtl .Wt-tabs .citem, body.Wt-rtl .Wt-tabs .citemselected {
     width: 100%;
 }
 
-.Wt-itemview div.Wt-tv-rh {
+.Wt-itemview .Wt-tv-rh {
     float: right;
     width: 4px;
     cursor: col-resize;
 }
 
-body.Wt-rtl .Wt-itemview div.Wt-tv-rh {
+.Wt-itemview .Wt-disabled .Wt-tv-rh {
+    cursor: default;
+}
+
+body.Wt-rtl .Wt-itemview .Wt-tv-rh {
     float: left;
 }
 
-.Wt-itemview div.Wt-tv-no-rh {
+.Wt-itemview .Wt-tv-no-rh {
     width: 0px;
     margin-left: 4px;
     cursor: default;
@@ -838,7 +842,12 @@ body.Wt-rtl .Wt-itemview div.Wt-tv-rh {
     height: 16px;
     padding-bottom: 6px;
     cursor: pointer;
-    cursor:hand;
+    cursor: hand;
+}
+
+.Wt-itemview .Wt-disabled .Wt-tv-sh {
+    background: url(sort-arrow-disabled.gif) no-repeat 0 6px;
+    cursor: default;
 }
 
 body.Wt-rtl .Wt-itemview .Wt-tv-sh {
@@ -876,6 +885,10 @@ body.Wt-rtl .Wt-itemview .Wt-tv-sh {
     white-space: nowrap;
 }
 
+.Wt-itemview .Wt-header .Wt-disabled .Wt-label {
+    color: gray;
+}
+
 .Wt-itemview .Wt-header .Wt-wwrap .Wt-label {
     overflow: visible;
     white-space: normal;
@@ -883,6 +896,10 @@ body.Wt-rtl .Wt-itemview .Wt-tv-sh {
 
 .Wt-itemview .Wt-tv-rh:hover {
     background-color: #DDDDDD;
+}
+
+.Wt-itemview .Wt-disabled .Wt-tv-rh:hover {
+    background-color: transparent;
 }
 
 .Wt-itemview .Wt-tv-sh-none {

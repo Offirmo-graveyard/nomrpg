@@ -13,37 +13,29 @@ SET(Boost_DEBUG                 ON) # activate debug output for the FindBoost cm
 SET(Boost_USE_MULTITHREADED     ON)
 SET(Boost_DETAILED_FAILURE_MSG  ON)
 
-if(${COMPUTER_NAME} STREQUAL "cmxd7095")
-	SET(Boost_NO_SYSTEM_PATHS       TRUE)
-	SET(BOOST_ROOT                  /Soft/infinityFO/boost)
-elseif(${COMPUTER_NAME} STREQUAL "toto")
-	SET(Boost_NO_SYSTEM_PATHS       TRUE)
-	SET(BOOST_ROOT                  /srv/dev/tools/gcc44/boost)
-endif()
-
-#FIND_PACKAGE( Boost 1.47.0 )
-FIND_PACKAGE( Boost 1.40.0 COMPONENTS system program_options filesystem)
+FIND_PACKAGE( Boost 1.51.0 COMPONENTS system program_options filesystem signals)
 message("Boost_FOUND = ${Boost_FOUND}")
 message("Boost_INCLUDE_DIRS = ${Boost_INCLUDE_DIRS}")
 message("Boost_LIBRARIES = ${Boost_LIBRARIES}")
 message("Boost_SYSTEM_LIBRARY = ${Boost_SYSTEM_LIBRARY}")
 
+SET( UnitTestPP_FIND_REQUIRED TRUE ) # so detection will stop if UT++ not found
 FIND_PACKAGE( UnitTest++ )
 # message("\n=== UnitTest++ ===")
-# message("utpp found = ${LIBUNITTESTPP_FOUND}")
-# message("utpp inc   = ${LIBUNITTESTPP_INCLUDE_DIRS}")
-# message("utpp lib   = ${LIBUNITTESTPP_LIBRARIES}")
-# message("utpp defs  = ${LIBUNITTESTPP_DEFINITIONS}")
+# message("UnitTest++ found = ${UnitTestPP_FOUND}")
+# message("UnitTest++ inc   = ${UnitTestPP_INCLUDE_DIR}")
+# message("UnitTest++ lib   = ${UnitTestPP_LIBRARIES}")
+# message("UnitTest++ defs  = ${UnitTestPP_DEFINITIONS}")
 
 if(${USE_WT})
-FIND_PACKAGE( Wt REQUIRED )
-# option specific to Wt
-SET (WT_CONNECTOR "wthttp" CACHE STRING "Connector used (wthttp or wtfcgi)")
-# message("Wt_LIBRARY = ${Wt_LIBRARY}")
-# message("Wt_DEBUG_LIBRARY = ${Wt_DEBUG_LIBRARY}")
-# message("Wt_DBOSQLITE3_LIBRARY = ${Wt_DBOSQLITE3_LIBRARY}")
-# message("Wt_DBOSQLITE3_DEBUG_LIBRARY = ${Wt_DBOSQLITE3_DEBUG_LIBRARY}")
-add_definitions( -DUSE_WT=1 )
+	FIND_PACKAGE( Wt REQUIRED )
+	# option specific to Wt
+	SET (WT_CONNECTOR "wthttp" CACHE STRING "Connector used (wthttp or wtfcgi)")
+	# message("Wt_LIBRARY = ${Wt_LIBRARY}")
+	# message("Wt_DEBUG_LIBRARY = ${Wt_DEBUG_LIBRARY}")
+	# message("Wt_DBOSQLITE3_LIBRARY = ${Wt_DBOSQLITE3_LIBRARY}")
+	# message("Wt_DBOSQLITE3_DEBUG_LIBRARY = ${Wt_DBOSQLITE3_DEBUG_LIBRARY}")
+	add_definitions( -DUSE_WT=1 )
 endif()
 
 	#TARGET_LINK_LIBRARIES( ${MODEL_SPEC_TARGET}
@@ -58,7 +50,7 @@ endif()
 # ${Boost_filesystem_LIBRARY}
 # ${Boost_program_options_LIBRARY}
 
-# ${LIBUNITTESTPP_LIBRARIES}
+# ${UnitTestPP_LIBRARIES}
 
 # ${Wt_DEBUG_LIBRARY}        # or {Wt_LIBRARY}
 # ${Wt_HTTP_DEBUG_LIBRARY}   # or {Wt_HTTP_LIBRARY}
@@ -78,9 +70,9 @@ endif()
 SET( ALL_LIBS )
 ## specific
 if(${EXEC_TYPE} STREQUAL "Full")
-	LIST(APPEND  ALL_LIBS  ${Wt_DEBUG_LIBRARY} ${Wt_DBOSQLITE3_DEBUG_LIBRARY} ${Wt_HTTP_DEBUG_LIBRARY} )
+	LIST(APPEND  ALL_LIBS  ${Wt_DEBUG_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_FILESYSTEM_LIBRARY} ${Wt_DBO_DEBUG_LIBRARY} ${Wt_DBOSQLITE3_DEBUG_LIBRARY} ${Wt_HTTP_DEBUG_LIBRARY} ${Boost_SIGNALS_LIBRARY} )
 else()
-	LIST(APPEND  ALL_LIBS  ${Wt_DEBUG_LIBRARY} ${Wt_DBOSQLITE3_DEBUG_LIBRARY} )
-	LIST(APPEND  ALL_LIBS  ${LIBUNITTESTPP_LIBRARIES} ${Boost_SYSTEM_LIBRARY} ${Wt_TEST_DEBUG_LIBRARY} )
+	LIST(APPEND  ALL_LIBS  ${Wt_DEBUG_LIBRARY} ${Wt_DBO_DEBUG_LIBRARY} ${Wt_DBOSQLITE3_DEBUG_LIBRARY} )
+	LIST(APPEND  ALL_LIBS  ${UnitTestPP_LIBRARIES} ${Boost_SYSTEM_LIBRARY} ${Boost_SIGNALS_LIBRARY} ${Boost_FILESYSTEM_LIBRARY} ${Wt_TEST_DEBUG_LIBRARY} )
 endif()
 #message("---\nAll libs = ${ALL_LIBS}")

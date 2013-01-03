@@ -3,7 +3,9 @@
 #include <Wt/Auth/Identity>
 
 #include "OffirmoWebApp.hpp"
-#include "BoringRPGWidget.hpp"
+#include "ChatWidget.hpp"
+#include "BoringRPGCentral.hpp"
+
 
 AppPage::AppPage(OffirmoWebApp& parentApp):
 	GenericPage(parentApp),
@@ -29,6 +31,10 @@ void AppPage::will_be_displayed_callback()
 	Wt::Auth::AuthWidget* authWidget = m_parentApp.getAuthWidget();
 	this->addWidget(authWidget);
 
-	BoringRPGWidget* boring_widget = new BoringRPGWidget(m_parentApp);
-	this->addWidget(boring_widget);
+	BoringRPGCentral* boring_rpg = new BoringRPGCentral(m_parentApp.get_app_session());
+	this->addWidget(boring_rpg->get_play_widget().get());
+	this->addWidget(boring_rpg->get_stats_widget().get());
+
+	ChatWidget* chat_widget = new ChatWidget(m_parentApp.get_app_session());
+	this->addWidget(chat_widget);
 }

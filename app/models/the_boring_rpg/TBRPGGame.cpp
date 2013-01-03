@@ -238,7 +238,7 @@ TBRPGGame::TBRPGameLocalEventId TBRPGGame::pick_new_click_event()
 	// Note : see boost::random::discrete_distribution documentation
 	// for an example of use
 
-	std::vector<double>::iterator itr = m_random_infos.events_probabilities.begin();
+	//std::vector<double>::iterator itr = m_random_infos.events_probabilities.begin();
 
 	boost::random::discrete_distribution<> dist(m_random_infos.events_probabilities.begin(), m_random_infos.events_probabilities.end());
 

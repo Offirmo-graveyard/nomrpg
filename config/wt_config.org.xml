@@ -74,7 +74,7 @@
 		 Auto: cookies is available, otherwise URL rewriting
 		 URL:  only URL rewriting
 	      -->
-	    <tracking>Auto</tracking>
+	    <tracking>URL</tracking>
 
 	    <!-- How reload should be handled.
 
@@ -83,7 +83,7 @@
 	       the URL will not be cluttered with a sessionid.
 	       However, WApplication::refresh() will never be called.
 	      -->
-	    <reload-is-new-session>false</reload-is-new-session>
+	    <reload-is-new-session>true</reload-is-new-session>
 
 	    <!-- Session timeout (seconds).
 
@@ -217,7 +217,7 @@
 	     - false: JavaScript errors are caught and a simple error message
 	              is printed to indicate that something is terribly wrong
 	  -->
-	<debug>true</debug>
+	<debug>false</debug>
 
 	<!-- Log file
 
@@ -266,7 +266,7 @@
            Maximum size of an incoming POST request. This value must be
            increased when the user is allowed to upload files.
          -->
-	<max-request-size>4096</max-request-size>
+	<max-request-size>128</max-request-size>
 
 	<!-- Session id length (number of characters) -->
 	<session-id-length>16</session-id-length>
@@ -354,7 +354,7 @@
            still a draft. Wt implements up to version 17 of the draft
 	   (latest as of November 2011).
 	  -->
-	<web-sockets>true</web-sockets>
+	<web-sockets>false</web-sockets>
 
 	<!-- Redirect message shown for browsers without JavaScript support
 
@@ -543,7 +543,7 @@
 	       by setting this property, or for an individual application
 	       entry point by passing a location to WServer::addEntryPoint().
 	      -->
-	    <property name="favicon">/favicon.ico</property>
+	    <!-- <property name="favicon">images/favicon.ico</property> -->
 	</properties>
 
     </application-settings>

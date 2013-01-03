@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- original : wt/src/xml/auth.xml -->
-<!-- last copied : unknown -->
+<!-- last copied : 2012/12/26 (3.2.3) -->
 <!-- do NOT modify, use AuthOverride ! -->
 <messages xmlns:if="Wt.WTemplate.conditions">
 

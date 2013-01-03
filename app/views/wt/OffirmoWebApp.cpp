@@ -157,7 +157,11 @@ void OffirmoWebApp::load_msg_rsrc_bundles()
 }
 void OffirmoWebApp::load_msg_rsrc_bundle(std::string bundle_id)
 {
-	static const std::string bundle_path = "../wt-xp/config/";
+	std::string property_name = "application-settings.max-request-size";
+	std::string bundle_path;
+	readConfigurationProperty( "location", bundle_path);
+	// XXX TODO get it from somewhere
+	bundle_path = "../nomrpg/config/";
 	messageResourceBundle().use(appRoot() + bundle_path + bundle_id);
 
 	check_msg_rsrc_bundle(bundle_id);
