@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6, label {
     color: Tomato;
 }
 
+
 /*
  * Validators
  */
@@ -116,8 +117,9 @@ h1, h2, h3, h4, h5, h6, label {
  */
 .Wt-dialogcover {
     background: #CCCCCC;
-    background: rgb(204, 204, 204); /* For IE, ... */
-    background: rgba(204, 204, 204, 0.5);
+    /* changed */
+    background: rgb(76, 76, 76); /* For IE, ... */
+    background: rgba(76, 76, 76, 0.5);
     height: 100%; width: 100%;
     top: 0px; left: 0px;
     position: fixed;
@@ -242,18 +244,18 @@ h1, h2, h3, h4, h5, h6, label {
  * WDatePicker
  */
 .Wt-datepicker {
-    background-color: white;
+    background-color: black; /* changed */
 }
 
 /*
  * WDialog
  */
 .Wt-dialog {
-    background-color: white;
+    background-color: black; /* changed */
 }
 
 .Wt-dialog .titlebar {
-    color: #FFFFFF;
+    color: black; /* changed */
     background: #6880A0 url(title-gradient.png) repeat-x scroll 0 -20px;
     cursor: move;
     font: bold 12px Verdana;
@@ -686,15 +688,15 @@ body.Wt-rtl .Wt-tabs .citem, body.Wt-rtl .Wt-tabs .citemselected {
 .Wt-tabs li:hover .item, .Wt-tabs .itemselected,
 .Wt-tabs li:hover .citem, .Wt-tabs .citemselected,
 .Wt-tabs li:hover a {
-    background: white;
-    color: black;
+    background: black; /* changed */
+    color: white; /* changed */
     border-bottom: 1px solid white;
     margin-bottom: -1px;
 }
 
 .Wt-tabs li .itemselected a, .Wt-tabs li .itemselected button {
-    background: white;
-    color: black;
+    background: black; /* changed */
+    color: white; /* changed */
 }
 
 .Wt-tabs .Wt-closeicon, .Wt-tabs span.citemselected .Wt-closeicon {

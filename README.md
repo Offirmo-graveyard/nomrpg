@@ -1,5 +1,6 @@
 nomrpg
 ======
 
-Navigator Online Multiplayer Role Playing Game - a framework for making a navigator web game in HTML/CSS/Javascript (client side) and C++/Wt (server side).
+Navigator Online Multiplayer Role Playing Game - a navigator RPG in HTML/CSS/Javascript (client side) and C++/Wt (server side).
 
+Right now, it's rather a bunch of half-working experiments of mine ;-)

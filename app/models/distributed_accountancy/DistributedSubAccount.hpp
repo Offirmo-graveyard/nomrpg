@@ -15,14 +15,15 @@ class DistributedSubAccount: public NamedPersistableObject, public TiedToDistrib
 {
 public:
 	static const std::string cm_main_subaccount_name;
+	static const std::string cm_default_subaccount_name;
 
 /*	enum ToMainAccountRelation
 	{
 		IS_INTERNAL,
 		IS_EXTERNAL
 	};*/
-	DistributedSubAccount(const std::string& denomination = "");
-	DistributedSubAccount(const DistributedAccount& da, const std::string& denomination = ""); //, enum ToMainAccountRelation ma_rel = DistributedSubAccount::IS_EXTERNAL);
+	DistributedSubAccount(const std::string& denomination = cm_default_subaccount_name);
+	DistributedSubAccount(const DistributedAccount& da, const std::string& denomination = cm_default_subaccount_name); //, enum ToMainAccountRelation ma_rel = DistributedSubAccount::IS_EXTERNAL);
 
 	virtual ~DistributedSubAccount();
 

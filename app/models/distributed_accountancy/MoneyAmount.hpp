@@ -8,6 +8,9 @@
 #include "vpiotr-decimal_for_cpp/vpiotr-decimal.h"
 #include "Currency.hpp"
 
+#include "Mok/Exception.hpp"
+
+
 //typedef double money_amount_internal_representation;
 //typedef float money_amount_internal_representation;
 #define MONEY_DECIMALS 2
@@ -17,8 +20,8 @@ typedef dec::decimal<MONEY_DECIMALS> money_amount_internal_representation;
 class MoneyAmount
 {
 public:
-	// no value constructor because it's too complicated to handle type conversions.
-	// see dedicated function.
+	static const std::string cm_default_incorrect_currency_code;
+
 	MoneyAmount();
 	MoneyAmount(money_amount_internal_representation value, const Currency& currency);
 	MoneyAmount(double value, const Currency& currency);
@@ -26,18 +29,22 @@ public:
 	virtual ~MoneyAmount(); // just for declaring it virtual
 
 	template<typename T>
-	void set_value(const T& value);
+	void set_value(T value) { is_uninitialized = false; m_internal_value = dec::decimal_cast<MONEY_DECIMALS>(value); }
+
+	void set_currency(const Currency& currency);
 
 	/////// POD ///////
 	MoneyAmount operator+(const MoneyAmount&);
 	MoneyAmount operator-(const MoneyAmount&);
-	MoneyAmount operator*(const MoneyAmount&);
-	MoneyAmount operator/(const MoneyAmount&);
+	// of course, we can't multiply or divied two amounts
+	MoneyAmount operator*(double value);
+	MoneyAmount operator/(double value);
 
 	MoneyAmount operator +=(const MoneyAmount&);
 	MoneyAmount operator -=(const MoneyAmount&);
-	MoneyAmount operator *=(const MoneyAmount&);
-	MoneyAmount operator /=(const MoneyAmount&);
+	// of course, we can't multiply or divied two amounts
+	MoneyAmount operator *=(double value);
+	MoneyAmount operator /=(double value);
 
 	bool operator==(const MoneyAmount&) const;
 	bool operator!=(const MoneyAmount&) const;
@@ -55,8 +62,12 @@ public:
 	T get_value() const { return static_cast<T>(m_internal_value.getAsDouble()); }
 
 	std::string get_human_representation() const;
+	// useful when we want control over the format
+	std::string get_human_representation_without_currency() const;
 
 protected:
+	bool is_uninitialized; // set when default constructor is used (no amount, no currency)
+	                       // useful to allow arithmetic on objects auto-created, like with maps
 	void init(money_amount_internal_representation value, const Currency& currency);
 
 	static void check_operands_compatibility(const MoneyAmount& a, const MoneyAmount& b);

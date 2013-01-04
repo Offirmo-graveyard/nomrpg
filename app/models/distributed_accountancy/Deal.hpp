@@ -19,8 +19,10 @@
 class Deal: public NamedPersistableObject, public TiedToDistributedAccount
 {
 public:
-	enum Direction
+
+	enum Direction // relative to the distributed account
 	{
+		UNKNOWN,
 		INPUT,
 		OUTPUT,
 		INTERNAL
@@ -51,12 +53,26 @@ public:
 	MoneyAmount get_amount() const { return m_amount; }
 	const DistributedSubAccount& get_source() const { return m_source_sub_account; }
 	const DistributedSubAccount& get_destination() const { return m_destination_sub_account; }
+	boost::posix_time::ptime get_trade_date() const { return m_trade_date; }
+	boost::posix_time::ptime get_value_date() const { return m_value_date; }
+	boost::posix_time::ptime get_settlement_date() const { return m_settlement_date; }
+
+	// "fluid" interfaces
+	Deal& is_internal() { set_direction(INTERNAL); return *this; }
+	Deal& is_input() { set_direction(INPUT); return *this; }
+	Deal& is_output() { set_direction(OUTPUT); return *this; }
+	Deal& of(double value, std::string currency_code) { set_amount(MoneyAmount(value, currency_code)); return *this; }
+	Deal& on_date(std::string date) { set_trade_value_settlement_dates_YYYYMMDD(date); return *this; }
+	Deal& from(const DistributedSubAccount& dsa) { set_source(dsa); return *this; }
+	Deal& to(const DistributedSubAccount& dsa) { set_destination(dsa); return *this; }
+
+	// misc
+	std::string get_direction_as_string() const;
+	std::string get_direction_as_string_symbol() const;
 
 protected:
 	enum Direction m_direction;
 	MoneyAmount m_amount;
-	//std::string m_source_sub_account_id;
-	//std::string m_destination_sub_account_id;
 	DistributedSubAccount m_source_sub_account;
 	DistributedSubAccount m_destination_sub_account;
 

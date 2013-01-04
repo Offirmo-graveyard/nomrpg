@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<messages>
+<messages nplurals="2" plural="n==1 ? 0 : 1">
 	
 	<!-- to check if this rsrc file was correctly loaded (1/2) -->
 	<message id="AppStrings_fr.xml.begin">ok</message>

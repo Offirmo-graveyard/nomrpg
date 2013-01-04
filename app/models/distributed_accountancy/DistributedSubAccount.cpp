@@ -2,6 +2,7 @@
 
 
 const std::string DistributedSubAccount::cm_main_subaccount_name = "main";
+const std::string DistributedSubAccount::cm_default_subaccount_name = "???";
 
 
 DistributedSubAccount::DistributedSubAccount(const std::string& denomination):
