@@ -7,9 +7,7 @@
 c++vm_minimum_required_version 1.0
 
 # As far as I know, no particular gcc version is required
-# so let's use the system one
-require compiler.gcc,   version : system
-require lib.std,        version : system
+require compiler.gcc
 
 require lib.UnitTest++, version : 1.4+
 
