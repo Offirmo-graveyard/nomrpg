@@ -25,7 +25,7 @@ include(build/flags.cmake)
 ### misc
 #SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
-if(${COMPUTER_NAME} STREQUAL "cmxd7095")
+if(${COMPUTER_NAME} STREQUAL "special-x86-32computer")
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -m32") # generate code for a 32 bits environment, cf. http://gcc.gnu.org/onlinedocs/gcc-4.6.2/gcc/i386-and-x86_002d64-Options.html#i386-and-x86_002d64-Options
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 endif()
